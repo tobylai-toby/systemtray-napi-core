@@ -2,7 +2,7 @@ name: CI
 
 env:
   DEBUG: napi:*
-  APP_NAME: systemtray-napi-core
+  APP_NAME: bindings
   MACOSX_DEPLOYMENT_TARGET: '10.13'
   CARGO_INCREMENTAL: '1'
 
