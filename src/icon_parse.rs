@@ -1,5 +1,5 @@
 use base64::prelude::{Engine as _, BASE64_STANDARD};
-use tray_icon::{Icon};
+use tray_icon::Icon;
 pub fn parse_icon_from_string(icon: String) -> Icon {
   // if base64 dataurl
   if icon.starts_with("data:image/") {

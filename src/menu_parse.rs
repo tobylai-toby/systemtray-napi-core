@@ -27,11 +27,11 @@ const CHARSET: &[u8] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZ\
                             0123456789)(*&^%$#@!~";
 fn random_id() -> String {
   (0..8)
-        .map(|_| {
-            let idx = rng().random_range(0..CHARSET.len());
-            CHARSET[idx] as char
-        })
-        .collect()
+    .map(|_| {
+      let idx = rng().random_range(0..CHARSET.len());
+      CHARSET[idx] as char
+    })
+    .collect()
 }
 
 fn to_native_item(item: &JsMenuItem) -> Result<Box<dyn tray_icon::menu::IsMenuItem>, String> {
@@ -82,9 +82,9 @@ fn to_native_item(item: &JsMenuItem) -> Result<Box<dyn tray_icon::menu::IsMenuIt
 }
 
 fn get_callback_map(item: &JsMenuItem) -> HashMap<String, Function<'static, (), ()>> {
-  let mut map= HashMap::new();
+  let mut map = HashMap::new();
   if let Some(cb) = item.callback {
-    map.insert(item.id.clone().unwrap_or_default(),cb);
+    map.insert(item.id.clone().unwrap_or_default(), cb);
   }
   if let Some("submenu") = item.r#type.as_deref() {
     if let Some(submenu) = item.submenu.as_ref() {

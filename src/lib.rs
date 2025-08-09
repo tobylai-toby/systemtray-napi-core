@@ -6,7 +6,7 @@ use std::collections::HashMap;
 use napi::bindgen_prelude::Function;
 use napi_derive::napi;
 use tao::{
-  event::{Event},
+  event::Event,
   event_loop::{ControlFlow, EventLoopBuilder},
 };
 use tray_icon::{menu::MenuEvent, TrayIconEvent};
@@ -22,7 +22,7 @@ enum UserEvent {
 #[napi]
 pub struct SystemTray {
   engine: TrayIcon,
-  callback_map: HashMap<String, Function<'static, (), ()>>
+  callback_map: HashMap<String, Function<'static, (), ()>>,
 }
 
 #[napi]
@@ -36,7 +36,7 @@ impl SystemTray {
     let engine = tray_builder.build().unwrap();
     SystemTray {
       engine: engine,
-      callback_map: HashMap::new()
+      callback_map: HashMap::new(),
     }
   }
 
