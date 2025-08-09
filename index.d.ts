@@ -9,7 +9,6 @@ export declare class SystemTray {
   setVisible(visible: boolean): void
   setMenu(jsMenu: Menu): void
   listen(): void
-  stop(): void
 }
 
 export interface Menu {

@@ -73,15 +73,15 @@ function requireNative() {
   } else if (process.platform === 'android') {
     if (process.arch === 'arm64') {
       try {
-        return require('./systemtray-napi.android-arm64.node')
+        return require('./systemtray-napi-core.android-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-android-arm64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-android-arm64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-android-arm64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-android-arm64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -89,15 +89,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./systemtray-napi.android-arm-eabi.node')
+        return require('./systemtray-napi-core.android-arm-eabi.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-android-arm-eabi')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-android-arm-eabi/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-android-arm-eabi')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-android-arm-eabi/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -109,15 +109,15 @@ function requireNative() {
   } else if (process.platform === 'win32') {
     if (process.arch === 'x64') {
       try {
-        return require('./systemtray-napi.win32-x64-msvc.node')
+        return require('./systemtray-napi-core.win32-x64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-win32-x64-msvc')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-win32-x64-msvc/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-win32-x64-msvc')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-win32-x64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -125,15 +125,15 @@ function requireNative() {
       }
     } else if (process.arch === 'ia32') {
       try {
-        return require('./systemtray-napi.win32-ia32-msvc.node')
+        return require('./systemtray-napi-core.win32-ia32-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-win32-ia32-msvc')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-win32-ia32-msvc/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-win32-ia32-msvc')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-win32-ia32-msvc/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -141,15 +141,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./systemtray-napi.win32-arm64-msvc.node')
+        return require('./systemtray-napi-core.win32-arm64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-win32-arm64-msvc')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-win32-arm64-msvc/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-win32-arm64-msvc')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-win32-arm64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -160,15 +160,15 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-      return require('./systemtray-napi.darwin-universal.node')
+      return require('./systemtray-napi-core.darwin-universal.node')
     } catch (e) {
       loadErrors.push(e)
     }
     try {
-      const binding = require('@tobylai/systemtray-napi-darwin-universal')
-      const bindingPackageVersion = require('@tobylai/systemtray-napi-darwin-universal/package.json').version
-      if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-        throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+      const binding = require('@tobylai/systemtray-napi-core-darwin-universal')
+      const bindingPackageVersion = require('@tobylai/systemtray-napi-core-darwin-universal/package.json').version
+      if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+        throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
       }
       return binding
     } catch (e) {
@@ -176,15 +176,15 @@ function requireNative() {
     }
     if (process.arch === 'x64') {
       try {
-        return require('./systemtray-napi.darwin-x64.node')
+        return require('./systemtray-napi-core.darwin-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-darwin-x64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-darwin-x64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-darwin-x64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-darwin-x64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -192,15 +192,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./systemtray-napi.darwin-arm64.node')
+        return require('./systemtray-napi-core.darwin-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-darwin-arm64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-darwin-arm64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-darwin-arm64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-darwin-arm64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -212,15 +212,15 @@ function requireNative() {
   } else if (process.platform === 'freebsd') {
     if (process.arch === 'x64') {
       try {
-        return require('./systemtray-napi.freebsd-x64.node')
+        return require('./systemtray-napi-core.freebsd-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-freebsd-x64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-freebsd-x64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-freebsd-x64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-freebsd-x64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -228,15 +228,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./systemtray-napi.freebsd-arm64.node')
+        return require('./systemtray-napi-core.freebsd-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-freebsd-arm64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-freebsd-arm64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-freebsd-arm64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-freebsd-arm64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -249,15 +249,15 @@ function requireNative() {
     if (process.arch === 'x64') {
       if (isMusl()) {
         try {
-          return require('./systemtray-napi.linux-x64-musl.node')
+          return require('./systemtray-napi-core.linux-x64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-x64-musl')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-x64-musl/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-x64-musl')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-x64-musl/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -265,15 +265,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./systemtray-napi.linux-x64-gnu.node')
+          return require('./systemtray-napi-core.linux-x64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-x64-gnu')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-x64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-x64-gnu')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-x64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -283,15 +283,15 @@ function requireNative() {
     } else if (process.arch === 'arm64') {
       if (isMusl()) {
         try {
-          return require('./systemtray-napi.linux-arm64-musl.node')
+          return require('./systemtray-napi-core.linux-arm64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-arm64-musl')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-arm64-musl/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-arm64-musl')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-arm64-musl/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -299,15 +299,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./systemtray-napi.linux-arm64-gnu.node')
+          return require('./systemtray-napi-core.linux-arm64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-arm64-gnu')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-arm64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-arm64-gnu')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-arm64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -317,15 +317,15 @@ function requireNative() {
     } else if (process.arch === 'arm') {
       if (isMusl()) {
         try {
-          return require('./systemtray-napi.linux-arm-musleabihf.node')
+          return require('./systemtray-napi-core.linux-arm-musleabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-arm-musleabihf')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-arm-musleabihf/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-arm-musleabihf')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-arm-musleabihf/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -333,15 +333,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./systemtray-napi.linux-arm-gnueabihf.node')
+          return require('./systemtray-napi-core.linux-arm-gnueabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-arm-gnueabihf')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-arm-gnueabihf/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-arm-gnueabihf')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-arm-gnueabihf/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -351,15 +351,15 @@ function requireNative() {
     } else if (process.arch === 'riscv64') {
       if (isMusl()) {
         try {
-          return require('./systemtray-napi.linux-riscv64-musl.node')
+          return require('./systemtray-napi-core.linux-riscv64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-riscv64-musl')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-riscv64-musl/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-riscv64-musl')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-riscv64-musl/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -367,15 +367,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./systemtray-napi.linux-riscv64-gnu.node')
+          return require('./systemtray-napi-core.linux-riscv64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@tobylai/systemtray-napi-linux-riscv64-gnu')
-          const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-riscv64-gnu/package.json').version
-          if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-            throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@tobylai/systemtray-napi-core-linux-riscv64-gnu')
+          const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-riscv64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+            throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -384,15 +384,15 @@ function requireNative() {
       }
     } else if (process.arch === 'ppc64') {
       try {
-        return require('./systemtray-napi.linux-ppc64-gnu.node')
+        return require('./systemtray-napi-core.linux-ppc64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-linux-ppc64-gnu')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-ppc64-gnu/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-linux-ppc64-gnu')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-ppc64-gnu/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -400,15 +400,15 @@ function requireNative() {
       }
     } else if (process.arch === 's390x') {
       try {
-        return require('./systemtray-napi.linux-s390x-gnu.node')
+        return require('./systemtray-napi-core.linux-s390x-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-linux-s390x-gnu')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-linux-s390x-gnu/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-linux-s390x-gnu')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-linux-s390x-gnu/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -420,15 +420,15 @@ function requireNative() {
   } else if (process.platform === 'openharmony') {
     if (process.arch === 'arm64') {
       try {
-        return require('./systemtray-napi.openharmony-arm64.node')
+        return require('./systemtray-napi-core.openharmony-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-openharmony-arm64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-openharmony-arm64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-openharmony-arm64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-openharmony-arm64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -436,15 +436,15 @@ function requireNative() {
       }
     } else if (process.arch === 'x64') {
       try {
-        return require('./systemtray-napi.openharmony-x64.node')
+        return require('./systemtray-napi-core.openharmony-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-openharmony-x64')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-openharmony-x64/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-openharmony-x64')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-openharmony-x64/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -452,15 +452,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./systemtray-napi.openharmony-arm.node')
+        return require('./systemtray-napi-core.openharmony-arm.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@tobylai/systemtray-napi-openharmony-arm')
-        const bindingPackageVersion = require('@tobylai/systemtray-napi-openharmony-arm/package.json').version
-        if (bindingPackageVersion !== '1.0.0' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
-          throw new Error(`Native binding package version mismatch, expected 1.0.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@tobylai/systemtray-napi-core-openharmony-arm')
+        const bindingPackageVersion = require('@tobylai/systemtray-napi-core-openharmony-arm/package.json').version
+        if (bindingPackageVersion !== '0.0.1' && (process.env.NAPI_RS_ENFORCE_VERSION_CHECK === '0' || !process.env.NAPI_RS_ENFORCE_VERSION_CHECK)) {
+          throw new Error(`Native binding package version mismatch, expected 0.0.1 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -478,7 +478,7 @@ nativeBinding = requireNative()
 
 if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   try {
-    nativeBinding = require('./systemtray-napi.wasi.cjs')
+    nativeBinding = require('./systemtray-napi-core.wasi.cjs')
   } catch (err) {
     if (process.env.NAPI_RS_FORCE_WASI) {
       loadErrors.push(err)
@@ -486,7 +486,7 @@ if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   }
   if (!nativeBinding) {
     try {
-      nativeBinding = require('@tobylai/systemtray-napi-wasm32-wasi')
+      nativeBinding = require('@tobylai/systemtray-napi-core-wasm32-wasi')
     } catch (err) {
       if (process.env.NAPI_RS_FORCE_WASI) {
         loadErrors.push(err)

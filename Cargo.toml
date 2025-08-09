@@ -1,6 +1,6 @@
 
 [package]
-authors = ["LongYinan <lynweklm@gmail.com>"]
+authors = ["Tobylai <toby_lai@126.com>"]
 edition = "2021"
 name = "systemtray_napi_core"
 version = "0.1.0"

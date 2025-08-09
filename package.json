@@ -18,7 +18,7 @@
     "index.js"
   ],
   "napi": {
-    "binaryName": "systemtray-napi-core",
+    "binaryName": "bindings",
     "targets": [
       "x86_64-pc-windows-msvc",
       "x86_64-apple-darwin",
@@ -43,7 +43,7 @@
     "format:rs": "cargo fmt",
     "lint": "oxlint .",
     "prepublishOnly": "napi prepublish -t npm",
-    "test": "ava",
+    "test": "node test-import.cjs",
     "version": "napi version",
     "prepare": "husky"
   },
