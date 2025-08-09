@@ -16,6 +16,7 @@ use crate::menu_parse::JsMenu;
 mod icon_parse;
 mod menu_parse;
 enum UserEvent {
+  #[allow(dead_code)]
   TrayIconEvent(tray_icon::TrayIconEvent),
   MenuEvent(tray_icon::menu::MenuEvent),
 }
