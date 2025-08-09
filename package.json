@@ -1,6 +1,6 @@
 {
   "name": "@tobylai/systemtray-napi-core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
   "repository": "git@github.com:tobylai-toby/systemtray-napi-core.git",
@@ -46,10 +46,10 @@
     "prepublishOnly": "napi prepublish -t npm",
     "test": "node test-import.cjs",
     "version": "napi version",
-    "patch-version":"npm version patch&&npm run build",
-    "minor-version":"npm version minor&&npm run build",
-    "major-version":"npm version major&&npm run build",
-    "push-version":"git push --follow-tags",
+    "patch-version": "npm version patch&&npm run build",
+    "minor-version": "npm version minor&&npm run build",
+    "major-version": "npm version major&&npm run build",
+    "push-version": "git push --follow-tags",
     "prepare": "husky"
   },
   "devDependencies": {
