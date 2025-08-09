@@ -275,8 +275,8 @@ jobs:
             libatk1.0-dev
       - name: Install dependencies
         run: npm install
-      - name: Create npm dirs
-        run: npm run create-npm-dirs
+      # - name: Create npm dirs
+      #   run: npm run create-npm-dirs
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
