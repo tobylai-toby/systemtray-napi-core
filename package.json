@@ -99,9 +99,9 @@
   },
   "packageManager": "yarn@4.9.2",
   "optionalDependencies": {
-    "@tobylai/systemtray-napi-core-win32-x64-msvc": "0.0.1",
-    "@tobylai/systemtray-napi-core-darwin-x64": "0.0.1",
-    "@tobylai/systemtray-napi-core-linux-x64-gnu": "0.0.1",
-    "@tobylai/systemtray-napi-core-darwin-arm64": "0.0.1"
+    "@tobylai/systemtray-napi-core-win32-x64-msvc": "0.0.6",
+    "@tobylai/systemtray-napi-core-darwin-x64": "0.0.6",
+    "@tobylai/systemtray-napi-core-linux-x64-gnu": "0.0.6",
+    "@tobylai/systemtray-napi-core-darwin-arm64": "0.0.6"
   }
 }
