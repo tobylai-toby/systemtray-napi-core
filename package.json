@@ -49,7 +49,7 @@
     "patch-version": "npm version patch&&npm run build&&git add . && git commit -m \"version\"",
     "minor-version": "npm version minor&&npm run build&&git add . && git commit -m \"version\"",
     "major-version": "npm version major&&npm run build&&git add . && git commit -m \"version\"",
-    "push-version": "git push&&git push --follow-tags",
+    "push-version": "git push --follow-tags",
     "prepare": "husky"
   },
   "devDependencies": {
