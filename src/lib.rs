@@ -36,7 +36,7 @@ impl SystemTray {
     }
     let engine = tray_builder.build().unwrap();
     SystemTray {
-      engine: engine,
+      engine,
       callback_map: HashMap::new(),
     }
   }
