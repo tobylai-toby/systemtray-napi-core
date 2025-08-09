@@ -46,10 +46,10 @@
     "prepublishOnly": "napi prepublish -t npm",
     "test": "node test-import.cjs",
     "version": "napi version",
-    "patch-version": "npm version patch&&npm run build",
-    "minor-version": "npm version minor&&npm run build",
-    "major-version": "npm version major&&npm run build",
-    "push-version": "git push --follow-tags",
+    "patch-version": "npm version patch&&npm run build&&git add . && git commit -m \"version\"",
+    "minor-version": "npm version minor&&npm run build&&git add . && git commit -m \"version\"",
+    "major-version": "npm version major&&npm run build&&git add . && git commit -m \"version\"",
+    "push-version": "git push&&git push --follow-tags",
     "prepare": "husky"
   },
   "devDependencies": {
