@@ -226,10 +226,10 @@ jobs:
             libharfbuzz-dev \
             libatk1.0-dev
 
-      - name: Configure npm
-        run: |
-          npm config set --json supportedArchitectures.cpu '["current", "arm64", "x64", "arm"]'
-          npm config set --json supportedArchitectures.libc '["current", "musl", "gnu"]'
+      # - name: Configure npm
+      #   run: |
+      #     npm config set --json supportedArchitectures.cpu '["current", "arm64", "x64", "arm"]'
+      #     npm config set --json supportedArchitectures.libc '["current", "musl", "gnu"]'
 
       - name: Install dependencies
         run: npm install
